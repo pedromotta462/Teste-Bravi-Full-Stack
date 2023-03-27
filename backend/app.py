@@ -36,7 +36,7 @@ class Contacts(BaseModel):
     count: int
 
 
-@server.get('/Contacts')  # Rota, endpoint, recurso ...
+@server.get('/Contacts') 
 @spec.validate(
     query=QueryContact,
     resp=Response(HTTP_200=Contacts)
