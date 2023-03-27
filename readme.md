@@ -14,21 +14,22 @@ atualize, obtenha e exclua as pessoas e os contatos.
 Crie um aplicativo da Web que explore a API criada na segunda atribuição. Você é livre para
 usar o que quiser para construir o frontend. O design UI/UX depende totalmente de você.
 
-OBS:Esse readme ainda precisa ser alterado, está apenas com algumas info default
+
 
 ## Stack utilizada
 
-**Front-end:** Angular, TailwindCSS
+**Front-end:** Angular, TypeScript
 
 **Back-end:** Python, Flask, TinyDB
 
 
 ## Funcionalidades
 
-- Temas dark e light
-- Preview em tempo real
-- Modo tela cheia
-- Multiplataforma
+- Visualizar contatos
+- Pesquisa de contato por id
+- Adicionar novo contato
+- Alterar informações do contato
+- Deletar um contato
 
 
 ## Screenshots
@@ -36,6 +37,54 @@ OBS:Esse readme ainda precisa ser alterado, está apenas com algumas info defaul
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone https://github.com/pedromotta462/Teste-Bravi-Full-Stack.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd Teste-Bravi-Full-Stack
+```
+#### Rodando Angular App
+
+Entre no front end e instale as dependências
+
+```bash
+  cd frontend/contactApp
+```
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  npm run start
+```
+#### Rodando API
+
+Na pasta do projeto navegue até a pasta onde está a API
+
+```bash
+  cd backend
+```
+
+Instale as dependências
+
+```bash
+  pip install -r requirements.txt
+```
+
+Inicie o servidor
+
+```bash
+  uvicorn index:app --host 0.0.0.0 --port 5000
+```
 ## Documentação da API
 
 #### Retorna todos os itens
@@ -63,38 +112,10 @@ OBS:Esse readme ainda precisa ser alterado, está apenas com algumas info defaul
 Recebe dois números e retorna a sua soma.
 
 
-## Instalação
+## Referência
 
-Instale my-project com npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
-    
-## Rodando localmente
-
-Clone o projeto
-
-```bash
-  git clone https://link-para-o-projeto
-```
-
-Entre no diretório do projeto
-
-```bash
-  cd my-project
-```
-
-Instale as dependências
-
-```bash
-  npm install
-```
-
-Inicie o servidor
-
-```bash
-  npm run start
-```
-
+ - [Angular Documentation](https://angular.io/docs)
+ - [Flask Documentation](https://flask.palletsprojects.com/en/2.2.x/)
+ - [TinyDB Documentation](https://tinydb.readthedocs.io/en/latest/intro.html)
+ - [Pydantic Documentation](https://docs.pydantic.dev/)
+ - [Flask Pydantic Spec Details](https://pypi.org/project/flask-pydantic-spec/)
