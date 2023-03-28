@@ -14,7 +14,7 @@ atualize, obtenha e exclua as pessoas e os contatos.
 Crie um aplicativo da Web que explore a API criada na segunda atribuição. Você é livre para
 usar o que quiser para construir o frontend. O design UI/UX depende totalmente de você.
 
-
+OBS: falta preencher a parte de documentação da api
 
 ## Stack utilizada
 
