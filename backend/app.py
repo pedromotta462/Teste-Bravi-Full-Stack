@@ -8,9 +8,11 @@ from flask_pydantic_spec import (
 from pydantic import BaseModel, Field
 from tinydb import TinyDB, Query
 from tinydb.storages import MemoryStorage
+from flask_cors import CORS
 
 
 server = Flask(__name__)
+CORS(server)
 spec = FlaskPydanticSpec('flask', title='Lista de Contatos')
 spec.register(server)
 database = TinyDB('database.json')

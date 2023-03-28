@@ -12,7 +12,9 @@ export class AppComponent {
   constructor(private contactService: ContactService) { }
 
   getAllContacts(){
-    
+    this.contactService.getAll()
+      .then(contacts => console.log(contacts))
+      .catch(error => console.error(error));
   }
 
 
