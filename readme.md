@@ -34,7 +34,7 @@ OBS: falta preencher a parte de documentação da api
 
 ## Screenshots
 
-![App Screenshot](/frontend/contactApp/src/assets/screencapture-localhost-4200-2023-03-28-06_28_34.png)
+![App Screenshot](/frontend/contactApp/src/assets/screencapture-localhost-4200-2023-03-28-06_31_42.png)
 
 
 ## Rodando localmente
