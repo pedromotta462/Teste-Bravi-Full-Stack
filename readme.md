@@ -84,6 +84,10 @@ Inicie o servidor
 ```bash
   uvicorn app:app --host 0.0.0.0 --port 5000
 ```
+ou
+```bash
+  python -m uvicorn app:app --host 0.0.0.0 --port 5000
+```
 ## Documentação da API
 
 Para mais detalhes sobre a api, visualize o pdf abaixo
