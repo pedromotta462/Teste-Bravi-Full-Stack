@@ -34,7 +34,7 @@ usar o que quiser para construir o frontend. O design UI/UX depende totalmente d
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](/frontend/contactApp/src/assets/screencapture-localhost-4200-2023-03-28-06_28_34.png)
 
 
 ## Rodando localmente
