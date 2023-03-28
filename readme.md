@@ -87,7 +87,7 @@ Inicie o servidor
 ## Documentação da API
 
 Para mais detalhes sobre a api, visualize o pdf abaixo
-[Baixe o PDF aqui](/docs/api%20document.pdf)
+ - [Baixe o PDF aqui](/docs/api%20document.pdf)
 
 Caso queira testa-la separadamente, após iniciar o servidor, basta entrar no endpoint:
 
