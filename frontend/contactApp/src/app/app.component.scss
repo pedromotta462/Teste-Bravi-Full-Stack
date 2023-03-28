@@ -3,17 +3,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: linear-gradient(to right, #333333, #f84018);
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to top, #120235, #7209b7, #001d3d);
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'montserrat';
 
     .box{
-        height: 15rem;
+        height: 20rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -21,22 +21,33 @@
     }
 
     div{
-        height: 12rem;
+        height: 15rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #e1e1e128;
+        background-color: #e1e1e171;
         padding: .5rem;
         margin: 1rem;
-        outline-style: double;
+        box-shadow: 0px 0px 5px #141414;
     }
 
     h1{
-        color: rgb(253, 253, 253);
+        color: gold;
     }
 
-    input, label{
+    label{
+        min-width: 150px;
+        text-align: center;
+        padding: 8px 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 5px 5px #14141460;
+        color: #141414;
+        margin: .5rem
+    }
+
+    input{
         min-width: 150px;
         padding: 8px 10px;
         border-radius: 5px;
@@ -64,5 +75,16 @@
         color: #141414;
         text-shadow: 1px 1px 5px 5px whitesmoke;
         transform: scale(1.05);
+    }
+
+    table {
+        th {
+            width: 150px;
+            border: 1px solid;
+        }
+        font-size: 16px;
+        text-align: center;
+        height: 400px; /* Define a altura da tabela */
+        overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
     }
 }

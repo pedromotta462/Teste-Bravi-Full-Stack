@@ -10,6 +10,9 @@ import { interfaceContacts } from './interfaceContacts';
 })
 export class AppComponent {
   title = 'contactApp';
+
+  contacts: interfaceContacts[] = [];
+
   consultId: number = 0;
 
   contactName: string = "";
@@ -23,19 +26,31 @@ export class AppComponent {
 
   deleteId: number = 0;
 
-
   constructor(private contactService: ContactService) { }
-
-  getAllContacts(){
+  
+  getAllContacts() {
     this.contactService.getAll()
-      .then(contacts => console.log(contacts))
+      .then(response => {
+        const { Contacts } = response!;
+        this.contacts = Contacts.map((contact: interfaceContacts) => ({
+          id: contact.id,
+          name: contact.name,
+          fone: contact.fone,
+          email: contact.email
+        }));
+      })
+      .then(contacts => console.log(this.contacts))
       .catch(error => console.error(error));
   }
 
-  getContactbyId(){
+  getContactbyId() {
     this.contactService.getbyId(this.consultId)
-      .then(contact => console.log(contact))
-      .catch(error => console.error(error));
+      .then(contact => this.contacts = contact ? [contact] : [] )
+      .then(contacts => console.log(this.contacts))
+      .catch(error => {
+        console.error(error)
+        alert('Contato não encontrado!')
+      });
   }
 
   addContact(){
@@ -45,7 +60,11 @@ export class AppComponent {
       email: this.contactEmail
     };
     this.contactService.addOne(contact)
-      .then(contact => console.log("Contato Adicionado!", contact))
+      .then(contact => {
+        console.log("Contato Adicionado!", contact);
+        alert("Contato Adicionado!");
+        this.getAllContacts();
+    })
       .catch(error => console.error(error));
   }
 
@@ -57,13 +76,21 @@ export class AppComponent {
       email: this.contactUpdateEmail
     };
     this.contactService.updateOne(contact)
-      .then(contact => console.log("Contato Atualizado!", contact))
+      .then(contact => {
+        console.log("Contato Atualizado!", contact);
+        alert("Contato Atualizado!");
+        this.getAllContacts();
+      })
       .catch(error => console.error(error));
   }
 
   deleteContact(){
     this.contactService.deleteOne(this.deleteId)
-    .then(contact => console.log("Contato Deletado!", contact))
+    .then(contact => {
+      console.log("Contato Deletado!", contact);
+      alert("Contato Deletado!");
+      this.getAllContacts();
+    })
     .catch(error => console.error(error));
   }
 

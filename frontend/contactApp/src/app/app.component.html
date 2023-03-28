@@ -1,14 +1,17 @@
 <h1>Lista de Contatos</h1>
 <div class="box">
   <div>
+    <label for="#">Aperte o botão para mostrar todos os contatos</label>
     <button (click)="getAllContacts()">Obter Todos</button>
   </div>
   <div>
+    <label for="#">Digite o id do contato que deseja visualizar</label>
     <input [(ngModel)]="consultId" type="number" placeholder="informe o id">
     <button (click)="getContactbyId()">Obter Somente 1</button>
   </div>
 
   <div>
+    <label for="#">Preencha com os dados do novo contato</label>
     <input [(ngModel)]="contactName" type="name" placeholder="nome">
     <input [(ngModel)]="contactEmail" type="email" placeholder="email">
     <input [(ngModel)]="contactFone" type="tel" placeholder="telefone">
@@ -16,6 +19,7 @@
   </div>
 
   <div>
+    <label for="#">Atualize com os novos dados do contato</label>
     <input [(ngModel)]="contactUpdateId" type="number" placeholder="id">
     <input [(ngModel)]="contactUpdateName" type="nome" placeholder="nome">
     <input [(ngModel)]="contactUpdateEmail" type="email" placeholder="email">
@@ -24,7 +28,33 @@
   </div>
 
   <div>
+    <label for="#">Digite o id do contato que deseja remover</label>
     <input [(ngModel)]="deleteId" type="number" placeholder="informe o id">
     <button (click)="deleteContact()">Remover</button>
   </div>
 </div>
+
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{contact.id}}</td>
+        <td>{{contact.name}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.fone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

@@ -4,5 +4,11 @@ export interface interfaceContacts{
     fone: string,
     id?: number,
     name: string,
+    Contacts?: interfaceContacts[];
 
+}
+
+export interface ApiResponse {
+    Contacts: interfaceContacts[];
+    count: number;
 }
