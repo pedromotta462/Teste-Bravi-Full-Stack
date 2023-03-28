@@ -1,8 +1,8 @@
 export interface interfaceContacts{
-    
+
     email: string,
     fone: string,
-    id: number,
+    id?: number,
     name: string,
 
 }
