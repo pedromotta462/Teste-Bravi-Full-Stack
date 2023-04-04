@@ -14,7 +14,6 @@ atualize, obtenha e exclua as pessoas e os contatos.
 Crie um aplicativo da Web que explore a API criada na segunda atribuição. Você é livre para
 usar o que quiser para construir o frontend. O design UI/UX depende totalmente de você.
 
-OBS: falta preencher a parte de documentação da api
 
 ## Stack utilizada
 
@@ -84,32 +83,18 @@ Inicie o servidor
 ```bash
   uvicorn app:app --host 0.0.0.0 --port 5000
 ```
+ou
+```bash
+  python -m uvicorn app:app --host 0.0.0.0 --port 5000
+```
 ## Documentação da API
 
-#### Retorna todos os itens
+Para mais detalhes sobre a api, visualize o pdf abaixo
+ - [Baixe o PDF aqui](/docs/api%20document.pdf)
 
-```http
-  GET /api/items
-```
+Caso queira testa-la separadamente, após iniciar o servidor, basta entrar no endpoint:
 
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
-
-#### Retorna um item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
-
-#### add(num1, num2)
-
-Recebe dois números e retorna a sua soma.
-
+  - /apidoc/swagger
 
 ## Referência
 
