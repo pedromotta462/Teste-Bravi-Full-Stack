@@ -18,7 +18,6 @@ OBS: falta preencher a parte de documentação da api
 
 ## Stack utilizada
 
-**Front-end:** Angular, TypeScript
 
 **Back-end:** Python, Flask, TinyDB
 
