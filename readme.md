@@ -17,6 +17,7 @@ usar o que quiser para construir o frontend. O design UI/UX depende totalmente d
 
 ## Stack utilizada
 
+**Front-end:** Angular, TypeScript
 
 **Back-end:** Python, Flask, TinyDB
 
